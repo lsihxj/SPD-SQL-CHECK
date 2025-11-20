@@ -1,0 +1,38 @@
+# 数据库配置
+database:
+  host: localhost
+  port: 5432
+  database: spdsqlcheck
+  username: postgres
+  password: "123456"
+  pool_size: 10
+  max_overflow: 20
+
+# 服务器配置
+server:
+  host: 0.0.0.0
+  port: 8888
+  reload: true
+  log_level: info
+
+# CORS配置
+cors:
+  allow_origins:
+    - http://localhost:3000
+    - http://localhost:5173
+  allow_credentials: true
+  allow_methods:
+    - "*"
+  allow_headers:
+    - "*"
+
+# 加密密钥（请在生产环境中更改此密钥）
+security:
+  encryption_key: "your-32-character-encryption-key-here-change-in-production"
+  secret_key: "your-secret-key-for-jwt-tokens-change-in-production"
+
+# 日志配置
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: logs/app.log
